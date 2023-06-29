@@ -1,0 +1,27 @@
+npx react-native init BahsegeiSportsBar
+cd BahsegeiSportsBar //Переходим в созданную папку проекта
+// Заходишь в почту и принимаешь приглашение в git
+
+npx react-native run-android //Запускаем, проверяем работоспособность
+
+// Останавливаем все процессы (CTRL+C в терминале), выключаем эмулятор
+
+// Устанавливаем зависимости
+npm i --save @react-navigation/native react-native-screens react-native-safe-area-context @react-navigation/native-stack react-native-svg @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-native-fontawesome mobx mobx-react-lite
+
+// Подключаем Git и удаленный репозиторий
+git init
+git remote add origin https://github.com/koralweb/BahsegeiSportsBar.git
+
+// Удаляем эти 2 файла:
+  -- App.tsx
+  -- .gitignore
+
+git branch -M dev
+git pull origin dev
+
+Меняем этот файл - android/app/src/main/java/com/BahsegeiSportsBar/MainActivity.java
+на файл MainActivity.java который лежит в корне приложения (там же где App.js)
+
+//Запускаем, проверяем работоспособность
+npx react-native run-android
