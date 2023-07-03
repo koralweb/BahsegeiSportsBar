@@ -24,12 +24,13 @@ const styles = StyleSheet.create({
   },
   cart: {
     backgroundColor: "white",
-    marginBottom: 35,
     width: "80%",
     height: 280,
     alignSelf: "center",
     alignContent: "center",
     borderRadius: 20,
+    marginBottom: 20,
+   
   },
   name: {
     fontSize: 20,

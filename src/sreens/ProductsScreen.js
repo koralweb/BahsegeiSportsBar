@@ -37,8 +37,9 @@ const ProductsScreen = ({navigation}) => {
 
 const styles = StyleSheet.create({
   cont: {
-    marginTop: 60,
-    
+    alignSelf: "center",
+    paddingLeft: 25,
+    marginTop: 25,
   },
  
 });

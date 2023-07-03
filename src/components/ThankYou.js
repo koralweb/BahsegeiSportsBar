@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     left: 0,
     alignItems: 'center',
     justifyContent: 'center',
-
+    backgroundColor: 'white',
   },
   title: {
     fontSize: 20,
@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
     alignSelf: "center",
     fontStyle: "italic",
+    width: '90%',
   },
 });
 

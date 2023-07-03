@@ -33,7 +33,7 @@ const Menu = ({setShowMenu, navigation}) => {
         <TouchableOpacity
           onPress={() => setShowMenu(false)}
           style={styles.backBtn}>
-          <FontAwesomeIcon icon={'angle-left'} color={'#00BBDC'} />
+          <FontAwesomeIcon icon={'angle-left'} color={'#000'} />
         </TouchableOpacity>
       )}
       <Image
@@ -54,22 +54,24 @@ const styles = StyleSheet.create({
     width: Dimensions.get('window').width,
     height: Dimensions.get('window').height,
     backgroundColor: '#fff',
-    alignItems: "center",
+    
   },
   backBtn: {
     marginLeft: 20,
-
+    
   },
   // 1130x420 = 2.69047
   topImage: {
     width: 200,
     height: 200,
     marginTop: 10,
+    alignSelf: "center",
   },
   items: {
     paddingHorizontal: 20,
     marginTop: 50,
     width: '90%',
+    alignSelf: "center",
   },
   item: {
     backgroundColor: '#00BBDC',

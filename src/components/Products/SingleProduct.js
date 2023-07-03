@@ -100,7 +100,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     alignSelf: "center",
-    marginTop: 250,
+    marginTop: "auto",
+    marginBottom:  "auto",
   },
   btnText: {
     fontSize: 18,
@@ -117,7 +118,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     alignSelf: "center",
-    marginTop: 250,
+    marginTop: "auto",
+    marginBottom:  "auto",
   },
 });
 

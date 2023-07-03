@@ -41,7 +41,6 @@ const styles = StyleSheet.create({
   title: {
     fontStyle: "italic",
     fontSize: 20,
-
   },
 });
 

@@ -48,6 +48,8 @@ const styles = StyleSheet.create({
   ...stylesGlobal,
   cont: {
     marginTop: 20,
+    marginBottom: 20,
+    
     
   },
   image: {
@@ -82,7 +84,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignSelf: "center",
     marginTop: 450,
-    
   },
   btnText: {
     fontSize: 18,
@@ -99,7 +100,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     alignSelf: "center",
-    marginTop: 350,
+    marginTop: "auto",
   },
   btnTextCart: {
     fontSize: 18,

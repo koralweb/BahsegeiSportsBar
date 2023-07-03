@@ -40,12 +40,14 @@ const styles = StyleSheet.create({
    alignItems: "center",
    alignSelf: "center",
    borderRadius: 30,  
+   marginBottom: 20,  
   },
   title: {
     fontSize: 15, 
     fontStyle: "italic", 
     color: "black", 
-    paddingBottom: 10, 
+    paddingBottom: 10,
+    width : 150,
   },
   price: {
     fontSize: 15, 

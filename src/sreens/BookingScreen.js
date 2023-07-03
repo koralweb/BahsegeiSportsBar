@@ -9,8 +9,7 @@ const BookingScreen = ({navigation}) => {
 
   return (
     <Wrapper navigation={navigation}>
-      <TouchableOpacity onPress={() => setShowThankYou(true)}>
-        <Text style={styles.title}>Бронирование столика</Text>
+      <View>
         <View style={styles.cont}>
         <Text style={styles.titleDesc}>Address details</Text>
         <View style={styles.item}>
@@ -31,11 +30,11 @@ const BookingScreen = ({navigation}) => {
         </View>
 
         </View>
-        <TouchableOpacity style={styles.btn}>
+        <TouchableOpacity style={styles.btn} onPress={() => setShowThankYou(true)}>
          <Text style={styles.btnText}>Оформить</Text>
         </TouchableOpacity>
         
-      </TouchableOpacity>
+      </View>
       {showThankYou && <ThankYou navigation={navigation} />}
     </Wrapper>
   ); 
@@ -43,12 +42,6 @@ const BookingScreen = ({navigation}) => {
 
 const styles = StyleSheet.create({
   ...stylesGlobal,
-  title: {
-    fontSize: 25,
-    alignSelf: "center",
-    marginBottom: 25,
-    fontStyle: "italic",
-  },
   cont: {
     marginLeft: 25,
   },
@@ -91,7 +84,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     alignSelf: "center",
-    marginTop: 150,
+    marginTop: 200,
   },
   btnText: {
     fontSize: 18,
