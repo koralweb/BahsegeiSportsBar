@@ -37,8 +37,10 @@ const ProductsScreen = ({navigation}) => {
 
 const styles = StyleSheet.create({
   cont: {
-    paddingTop: 60,
+    marginTop: 60,
+    
   },
+ 
 });
 
 export default ProductsScreen;

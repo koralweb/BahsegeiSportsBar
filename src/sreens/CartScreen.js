@@ -24,20 +24,22 @@ const CartScreen = ({navigation}) => {
       {products.list.some(el => el.added) ? (
         <>
           <ScrollView style={styles.cont}>{renderProducts()}</ScrollView>
-          <TouchableOpacity onPress={() => navigation.push('Order')}>
-            <Text>Оформить</Text>
+          <TouchableOpacity style={styles.btnCart} onPress={() => navigation.push('Order')}>
+          <Text style={styles.btnTextCart}>Оформить</Text>
           </TouchableOpacity>
+          
         </>
       ) : (
         <>
-          <View>
-            <Text>Корзина пуста</Text>
+          <View style={styles.cartTitle}>
+            <Text style={styles.cartText}>Корзина пуста</Text>
           </View>
-          <TouchableOpacity onPress={() => navigation.push('Market')}>
-            <Text>В магазин</Text>
+          <TouchableOpacity style={styles.btn} onPress={() => navigation.push('Market')}>
+            <Text style={styles.btnText}>В магазин</Text>
           </TouchableOpacity>
         </>
       )}
+       
     </Wrapper>
   );
 };
@@ -46,6 +48,7 @@ const styles = StyleSheet.create({
   ...stylesGlobal,
   cont: {
     marginTop: 20,
+    
   },
   image: {
     width: 70,
@@ -57,6 +60,53 @@ const styles = StyleSheet.create({
     right: 5,
     zIndex: 100,
   },
+  cartTitle: {
+    fontSize: 25,
+    alignSelf: "center",
+    marginTop: 45,
+    marginBottom: 45,
+    fontStyle: "italic",
+  },
+  cartText: {
+    fontSize: 25,
+    fontStyle: "italic",
+  },
+  btn: {
+    backgroundColor: "#00BBDC",
+    borderRadius: 25,
+    width: '80%',
+    height: '10%',
+    paddingTop: 10,
+    paddingBottom: 10,
+    alignItems: "center",
+    justifyContent: "center",
+    alignSelf: "center",
+    marginTop: 450,
+    
+  },
+  btnText: {
+    fontSize: 18,
+    alignSelf: "center",
+    color: "white",
+  },
+  btnCart: {
+    backgroundColor: "#00BBDC",
+    borderRadius: 25,
+    width: '80%',
+    height: '10%',
+    paddingTop: 10,
+    paddingBottom: 10,
+    alignItems: "center",
+    justifyContent: "center",
+    alignSelf: "center",
+    marginTop: 350,
+  },
+  btnTextCart: {
+    fontSize: 18,
+    alignSelf: "center",
+    color: "white",
+  },
+
 });
 
 export default observer(CartScreen);

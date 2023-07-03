@@ -9,13 +9,18 @@ const BroadcastsScreen = ({navigation}) => {
       broadcastsList
         // .filter(el => el.date >= new Date().getDate())
         .map(item => (
-          <View key={Math.random()}>
-            <Text>{item.liga}</Text>
-            <Text>
+          <View key={Math.random()} style={styles.wrp}>
+            <Text style={styles.liga}>{item.liga}</Text>
+            <View style={styles.desc}>
+            <Text style={styles.time}>
               {item.date}.06.2023 - {item.time}
             </Text>
-            <Text>{item.team1}</Text>
-            <Text>{item.team2}</Text>
+            <Text style={styles.team}>{item.team1}</Text>
+            <View style={styles.solid}></View>
+            <Text style={styles.team}>{item.team2}</Text>
+
+            </View>
+            
           </View>
         ))
     );
@@ -28,6 +33,49 @@ const BroadcastsScreen = ({navigation}) => {
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  cont: {
+    marginLeft: 30,
+  },
+  wrp: {
+    flexDirection: "row",
+    backgroundColor: "white",
+    width: "90%",
+    marginBottom: 10,
+    height: "8%",
+    borderRadius: 30,
+  },
+  liga: {
+    width: "40%",
+    paddingLeft: 10,
+    alignSelf: "center",
+    textAlign: "center",
+    color: "#FEAC23",
+    fontSize: 23,
+    fontWeight: "600",
+  },
+  desc: {
+    alignSelf: "center",
+    textAlign: "center",
+    paddingLeft: 10,
+  },
+  time: {
+    fontSize: 18,
+    color: "black",
+    fontStyle: "italic",
+    paddingBottom: 5,
+  },
+  team: {
+    fontSize: 15,
+    paddingBottom: 5,
+    paddingTop: 5,
+  },
+  solid: {
+    backgroundColor: "silver",
+    width: '80%',
+    height: 1,
+
+  },
+});
 
 export default BroadcastsScreen;

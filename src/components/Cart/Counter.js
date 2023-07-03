@@ -28,6 +28,22 @@ const Counter = () => {
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  cont: {
+    flexDirection: "row",
+    marginTop: 20,
+    backgroundColor: "#00BBDC",
+    borderRadius: 10,
+    width: 50,
+    justifyContent: "center",
+  },
+  text: {
+    fontSize: 17, 
+    fontStyle: "italic", 
+    color: "white", 
+    paddingLeft: 3, 
+    paddingRight: 3, 
+  },
+});
 
 export default Counter;

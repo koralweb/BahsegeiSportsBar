@@ -24,17 +24,21 @@ const SingleProduct = ({prod, close}) => {
       <TouchableOpacity onPress={close} style={styles.backBtn}>
         <FontAwesomeIcon icon={'angle-left'} size={20} />
       </TouchableOpacity>
-      <View>
+      <View style={styles.cart}>
         <Image source={prod.img} style={styles.image} />
+        <Text style={styles.name}>{prod.name}</Text>
+        <Text style={styles.price}>{prod.price}р</Text>
+        <Text style={styles.desc}>{prod.desc}</Text>
       </View>
-      <Text>{prod.name}</Text>
-      <Text>{prod.price}р</Text>
-      <Text>{prod.desc}</Text>
+      
       {added ? (
-        <FontAwesomeIcon icon={'check-circle'} size={50} />
+        <View style={styles.done}>
+          <Text style={styles.btnText}>Done</Text>
+        </View>
+       
       ) : (
-        <TouchableOpacity onPress={addProduct}>
-          <Text>Добавить</Text>
+        <TouchableOpacity onPress={addProduct} style={styles.btn}>
+          <Text style={styles.btnText}>Добавить</Text>
         </TouchableOpacity>
       )}
     </View>
@@ -52,13 +56,68 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     paddingTop: 36,
   },
+  cart: {
+    paddingTop: 36,
+    alignItems: "center",
+    marginLeft: 20,
+  },
   backBtn: {
     marginLeft: 20,
     marginTop: 10,
   },
   image: {
-    width: 100,
-    height: 100,
+    width: 130,
+    height: 130,
+    borderRadius: 80,
+    marginBottom: 30,
+  },
+  name: {
+    fontSize: 25,
+    alignSelf: "center",
+    marginTop: 20,
+    marginBottom: 20,
+    fontStyle: "italic",
+  },
+  price: {
+    fontSize: 20,
+    alignSelf: "center",
+    color: "#00BBDC",
+    fontWeight: "700",
+  },
+  desc: {
+    fontSize: 15,
+    alignSelf: "center",
+    marginTop: 25,
+    
+  },
+  btn: {
+    backgroundColor: "#00BBDC",
+    borderRadius: 25,
+    width: '80%',
+    height: '10%',
+    paddingTop: 10,
+    paddingBottom: 10,
+    alignItems: "center",
+    justifyContent: "center",
+    alignSelf: "center",
+    marginTop: 250,
+  },
+  btnText: {
+    fontSize: 18,
+    alignSelf: "center",
+    color: "white",
+  },
+  done: {
+    backgroundColor: "#20E300",
+    borderRadius: 25,
+    width: '80%',
+    height: '10%',
+    paddingTop: 10,
+    paddingBottom: 10,
+    alignItems: "center",
+    justifyContent: "center",
+    alignSelf: "center",
+    marginTop: 250,
   },
 });
 

@@ -22,7 +22,7 @@ const Menu = ({setShowMenu, navigation}) => {
           style={styles.item}
           key={screen.name}
           onPress={() => navigation.push(screen.name)}>
-          <Text>{screen.title}</Text>
+          <Text style={styles.text}>{screen.title}</Text>
         </TouchableOpacity>
       ));
   };
@@ -33,7 +33,7 @@ const Menu = ({setShowMenu, navigation}) => {
         <TouchableOpacity
           onPress={() => setShowMenu(false)}
           style={styles.backBtn}>
-          <FontAwesomeIcon icon={'angle-left'} color={'#000'} />
+          <FontAwesomeIcon icon={'angle-left'} color={'#00BBDC'} />
         </TouchableOpacity>
       )}
       <Image
@@ -54,9 +54,11 @@ const styles = StyleSheet.create({
     width: Dimensions.get('window').width,
     height: Dimensions.get('window').height,
     backgroundColor: '#fff',
+    alignItems: "center",
   },
   backBtn: {
     marginLeft: 20,
+
   },
   // 1130x420 = 2.69047
   topImage: {
@@ -66,9 +68,22 @@ const styles = StyleSheet.create({
   },
   items: {
     paddingHorizontal: 20,
-    marginTop: 20,
+    marginTop: 50,
+    width: '90%',
   },
-  item: {},
+  item: {
+    backgroundColor: '#00BBDC',
+    marginBottom: 20,
+    alignItems: "center",
+    justifyContent: "center",
+    height: 50,
+    borderRadius: 20,
+  },
+  text: {
+    fontSize: 20,
+    color: '#FFFFFF',
+    fontWeight: '600',
+  },
 });
 
 export default Menu;

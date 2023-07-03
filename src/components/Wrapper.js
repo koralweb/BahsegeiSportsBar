@@ -26,6 +26,13 @@ const Wrapper = ({navigation, options, children}) => {
 
 const styles = StyleSheet.create({
   ...stylesGlobal,
+  globalContainer: {
+    fontSize: 25,
+    fontStyle: "italic",
+
+  },
+   
+  
 });
 
 export default Wrapper;

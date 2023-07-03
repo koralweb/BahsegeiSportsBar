@@ -36,6 +36,12 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingHorizontal: 20,
     paddingBottom: 10,
+    
+  },
+  title: {
+    fontStyle: "italic",
+    fontSize: 20,
+
   },
 });
 
