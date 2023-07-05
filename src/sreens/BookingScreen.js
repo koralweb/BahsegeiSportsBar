@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     alignSelf: 'center',
-    marginTop: 200,
+    marginTop: 'auto',
   },
   btnText: {
     fontSize: 18,
