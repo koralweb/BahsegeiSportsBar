@@ -54,30 +54,28 @@ const styles = StyleSheet.create({
     width: Dimensions.get('window').width,
     height: Dimensions.get('window').height,
     backgroundColor: '#fff',
-    
   },
   backBtn: {
     marginLeft: 20,
-    
   },
   // 1130x420 = 2.69047
   topImage: {
     width: 200,
     height: 200,
     marginTop: 10,
-    alignSelf: "center",
+    alignSelf: 'center',
   },
   items: {
     paddingHorizontal: 20,
     marginTop: 50,
     width: '90%',
-    alignSelf: "center",
+    alignSelf: 'center',
   },
   item: {
     backgroundColor: '#00BBDC',
     marginBottom: 20,
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
     height: 50,
     borderRadius: 20,
   },

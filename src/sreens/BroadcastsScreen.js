@@ -5,25 +5,21 @@ import broadcastsList from '../data/broadcastsList';
 
 const BroadcastsScreen = ({navigation}) => {
   const renderItems = () => {
-    return (
-      broadcastsList
-        // .filter(el => el.date >= new Date().getDate())
-        .map(item => (
-          <View key={Math.random()} style={styles.wrp}>
-            <Text style={styles.liga}>{item.liga}</Text>
-            <View style={styles.desc}>
+    return broadcastsList
+      .filter(el => el.date >= new Date().getDate())
+      .map(item => (
+        <View key={Math.random()} style={styles.wrp}>
+          <Text style={styles.liga}>{item.liga}</Text>
+          <View style={styles.desc}>
             <Text style={styles.time}>
               {item.date}.06.2023 - {item.time}
             </Text>
             <Text style={styles.team}>{item.team1}</Text>
-            <View style={styles.solid}></View>
+            <View style={styles.solid} />
             <Text style={styles.team}>{item.team2}</Text>
-
-            </View>
-            
           </View>
-        ))
-    );
+        </View>
+      ));
   };
 
   return (
@@ -38,31 +34,31 @@ const styles = StyleSheet.create({
     marginLeft: 30,
   },
   wrp: {
-    flexDirection: "row",
-    backgroundColor: "white",
-    width: "90%",
+    flexDirection: 'row',
+    backgroundColor: 'white',
+    width: '90%',
     marginBottom: 10,
-    height: "8%",
+    height: '8%',
     borderRadius: 30,
   },
   liga: {
-    width: "40%",
+    width: '40%',
     paddingLeft: 10,
-    alignSelf: "center",
-    textAlign: "center",
-    color: "#FEAC23",
+    alignSelf: 'center',
+    textAlign: 'center',
+    color: '#FEAC23',
     fontSize: 23,
-    fontWeight: "600",
+    fontWeight: '600',
   },
   desc: {
-    alignSelf: "center",
-    textAlign: "center",
+    alignSelf: 'center',
+    textAlign: 'center',
     paddingLeft: 10,
   },
   time: {
     fontSize: 18,
-    color: "black",
-    fontStyle: "italic",
+    color: 'black',
+    fontStyle: 'italic',
     paddingBottom: 5,
   },
   team: {
@@ -71,10 +67,9 @@ const styles = StyleSheet.create({
     paddingTop: 5,
   },
   solid: {
-    backgroundColor: "silver",
+    backgroundColor: 'silver',
     width: '80%',
     height: 1,
-
   },
 });
 

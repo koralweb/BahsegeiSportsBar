@@ -37,11 +37,8 @@ const ProductsScreen = ({navigation}) => {
 
 const styles = StyleSheet.create({
   cont: {
-    alignSelf: "center",
-    paddingLeft: 25,
     marginTop: 25,
   },
- 
 });
 
 export default ProductsScreen;

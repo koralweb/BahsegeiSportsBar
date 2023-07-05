@@ -28,11 +28,8 @@ const styles = StyleSheet.create({
   ...stylesGlobal,
   globalContainer: {
     fontSize: 25,
-    fontStyle: "italic",
-
+    fontStyle: 'italic',
   },
-   
-  
 });
 
 export default Wrapper;

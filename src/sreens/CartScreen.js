@@ -24,22 +24,24 @@ const CartScreen = ({navigation}) => {
       {products.list.some(el => el.added) ? (
         <>
           <ScrollView style={styles.cont}>{renderProducts()}</ScrollView>
-          <TouchableOpacity style={styles.btnCart} onPress={() => navigation.push('Order')}>
-          <Text style={styles.btnTextCart}>Оформить</Text>
+          <TouchableOpacity
+            style={styles.btnCart}
+            onPress={() => navigation.push('Order', {cart: true})}>
+            <Text style={styles.btnTextCart}>Tasarım</Text>
           </TouchableOpacity>
-          
         </>
       ) : (
         <>
           <View style={styles.cartTitle}>
-            <Text style={styles.cartText}>Корзина пуста</Text>
+            <Text style={styles.cartText}>Kart boş</Text>
           </View>
-          <TouchableOpacity style={styles.btn} onPress={() => navigation.push('Market')}>
-            <Text style={styles.btnText}>В магазин</Text>
+          <TouchableOpacity
+            style={styles.btn}
+            onPress={() => navigation.push('Market')}>
+            <Text style={styles.btnText}>Mağazaya</Text>
           </TouchableOpacity>
         </>
       )}
-       
     </Wrapper>
   );
 };
@@ -49,8 +51,6 @@ const styles = StyleSheet.create({
   cont: {
     marginTop: 20,
     marginBottom: 20,
-    
-    
   },
   image: {
     width: 70,
@@ -64,50 +64,48 @@ const styles = StyleSheet.create({
   },
   cartTitle: {
     fontSize: 25,
-    alignSelf: "center",
+    alignSelf: 'center',
     marginTop: 45,
     marginBottom: 45,
-    fontStyle: "italic",
+    fontStyle: 'italic',
   },
   cartText: {
     fontSize: 25,
-    fontStyle: "italic",
+    fontStyle: 'italic',
   },
   btn: {
-    backgroundColor: "#00BBDC",
+    backgroundColor: '#00BBDC',
     borderRadius: 25,
     width: '80%',
     height: '10%',
     paddingTop: 10,
     paddingBottom: 10,
-    alignItems: "center",
-    justifyContent: "center",
-    alignSelf: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignSelf: 'center',
     marginTop: 450,
   },
   btnText: {
     fontSize: 18,
-    alignSelf: "center",
-    color: "white",
+    alignSelf: 'center',
+    color: 'white',
   },
   btnCart: {
-    backgroundColor: "#00BBDC",
+    backgroundColor: '#00BBDC',
     borderRadius: 25,
     width: '80%',
-    height: '10%',
     paddingTop: 10,
     paddingBottom: 10,
-    alignItems: "center",
-    justifyContent: "center",
-    alignSelf: "center",
-    marginTop: "auto",
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignSelf: 'center',
+    marginTop: 'auto',
   },
   btnTextCart: {
     fontSize: 18,
-    alignSelf: "center",
-    color: "white",
+    alignSelf: 'center',
+    color: 'white',
   },
-
 });
 
 export default observer(CartScreen);

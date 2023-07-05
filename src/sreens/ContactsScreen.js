@@ -3,51 +3,43 @@ import {StyleSheet, Text, View} from 'react-native';
 import Wrapper from '../components/Wrapper';
 
 const ContactsScreen = ({navigation}) => {
-  return <Wrapper navigation={navigation}>
-
-        <View style={styles.cont}>
-        <Text style={styles.titleDesc}>Address details</Text>
+  return (
+    <Wrapper navigation={navigation}>
+      <View style={styles.cont}>
         <View style={styles.item}>
-          <Text>Индекс -00001</Text>
-          <View style={styles.solid}></View>
-          <Text>Город</Text>
-          <View style={styles.solid}></View>
-          <Text>Страна</Text>
-          <View style={styles.solid}></View>
-          <Text>Номер 0000 0000 00</Text>
-          <View style={styles.solid}></View>
+          <Text>Dizin - 34522</Text>
+          <View style={styles.solid} />
+          <Text>Beylikdüzü Cd., Istanbul, İstanbul </Text>
+          <View style={styles.solid} />
+          <Text>Turkey</Text>
+          <View style={styles.solid} />
+          <Text>+905319671242</Text>
+          <View style={styles.solid} />
         </View>
-
-        </View>
-
-  </Wrapper>
-  
+      </View>
+    </Wrapper>
+  );
 };
 
 const styles = StyleSheet.create({
   cont: {
-    marginLeft: 25,
-  },
-  titleDesc: {
-    fontStyle: "italic",
-    marginBottom: 20,
-    marginTop: 20,
+    paddingHorizontal: '5%',
   },
   item: {
-    backgroundColor: "white",
+    marginTop: 20,
+    backgroundColor: 'white',
     borderRadius: 25,
     paddingLeft: 25,
-    width: '90%',
+    width: '100%',
     height: '60%',
     padding: 25,
   },
   solid: {
-    backgroundColor: "silver",
+    backgroundColor: 'silver',
     width: '80%',
     height: 1,
     marginBottom: 25,
   },
-  
 });
 
 export default ContactsScreen;

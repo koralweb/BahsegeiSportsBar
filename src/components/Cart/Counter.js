@@ -30,19 +30,21 @@ const Counter = () => {
 
 const styles = StyleSheet.create({
   cont: {
-    flexDirection: "row",
+    flexDirection: 'row',
     marginTop: 20,
-    backgroundColor: "#00BBDC",
+    backgroundColor: '#00BBDC',
     borderRadius: 10,
-    width: 50,
-    justifyContent: "center",
+    width: 80,
+    height: 25,
+    justifyContent: 'space-around',
+    marginRight: 10,
   },
   text: {
-    fontSize: 17, 
-    fontStyle: "italic", 
-    color: "white", 
-    paddingLeft: 3, 
-    paddingRight: 3, 
+    fontSize: 18,
+    fontWeight: '700',
+    color: 'white',
+    paddingLeft: 3,
+    paddingRight: 3,
   },
 });
 

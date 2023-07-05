@@ -9,37 +9,37 @@ const screensList = [
   {
     name: 'Home',
     component: HomeScreen,
-    title: 'Главная',
+    title: 'Ana Sayfa',
     icon: 'home',
   },
   {
     name: 'Market',
     component: ProductsScreen,
-    title: 'Магазин',
+    title: 'Mağaza',
     icon: 'handshake',
   },
   {
     name: 'Cart',
     component: CartScreen,
-    title: 'Корзина',
+    title: 'Araba',
     icon: 'shopping-cart',
   },
   {
     name: 'Order',
     component: BookingScreen,
-    title: 'Бронь столика',
+    title: 'Masa rezervasyonu',
     icon: 'tag',
   },
   {
     name: 'Broadcasts',
     component: BroadcastsScreen,
-    title: 'Трансляции',
+    title: 'Yayınlar',
     icon: 'file-text',
   },
   {
     name: 'Contacts',
     component: ContactsScreen,
-    title: 'Контакты',
+    title: 'Kişiler',
     icon: 'shield',
   },
 ];

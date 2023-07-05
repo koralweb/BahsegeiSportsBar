@@ -7,20 +7,20 @@ import Counter from './Counter';
 const Product = ({prod}) => {
   return (
     <View style={styles.cont}>
-       <Image source={prod.img} style={styles.image} />
-      
-     <View>
-       <Text style={styles.title}>{prod.name}</Text>
-       <Text style={styles.price}>{prod.price}р</Text>
-     </View>
-     <View>
-     <TouchableOpacity
-        style={styles.remove}
-        onPress={() => products.removeProduct(prod.id)}>
-        <FontAwesomeIcon icon={'trash'} color={'red'} />
-      </TouchableOpacity>
-      <Counter />
-     </View>  
+      <Image source={prod.img} style={styles.image} />
+
+      <View>
+        <Text style={styles.title}>{prod.name}</Text>
+        <Text style={styles.price}>{prod.price}L</Text>
+      </View>
+      <View>
+        <TouchableOpacity
+          style={styles.remove}
+          onPress={() => products.removeProduct(prod.id)}>
+          <FontAwesomeIcon icon={'trash'} color={'red'} size={25} />
+        </TouchableOpacity>
+        <Counter />
+      </View>
     </View>
   );
 };
@@ -30,29 +30,33 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
     borderRadius: 50,
-    margin : 10,
+    margin: 10,
   },
   cont: {
-   flexDirection: "row",
-   justifyContent: "space-around",
-   backgroundColor: "white",
-   width: "90%",
-   alignItems: "center",
-   alignSelf: "center",
-   borderRadius: 30,  
-   marginBottom: 20,  
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    backgroundColor: 'white',
+    width: '90%',
+    alignItems: 'center',
+    alignSelf: 'center',
+    borderRadius: 30,
+    marginBottom: 20,
   },
   title: {
-    fontSize: 15, 
-    fontStyle: "italic", 
-    color: "black", 
+    fontSize: 15,
+    fontStyle: 'italic',
+    color: 'black',
     paddingBottom: 10,
-    width : 150,
+    width: 150,
   },
   price: {
-    fontSize: 15, 
-    fontStyle: "italic", 
-    color: "#00BBDC", 
+    fontSize: 15,
+    fontStyle: 'italic',
+    color: '#00BBDC',
+  },
+  remove: {
+    alignSelf: 'flex-end',
+    marginRight: 20,
   },
 });
 

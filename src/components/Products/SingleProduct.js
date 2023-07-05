@@ -27,18 +27,17 @@ const SingleProduct = ({prod, close}) => {
       <View style={styles.cart}>
         <Image source={prod.img} style={styles.image} />
         <Text style={styles.name}>{prod.name}</Text>
-        <Text style={styles.price}>{prod.price}р</Text>
+        <Text style={styles.price}>{prod.price}L</Text>
         <Text style={styles.desc}>{prod.desc}</Text>
       </View>
-      
+
       {added ? (
         <View style={styles.done}>
-          <Text style={styles.btnText}>Done</Text>
+          <Text style={styles.btnText}>Katma</Text>
         </View>
-       
       ) : (
         <TouchableOpacity onPress={addProduct} style={styles.btn}>
-          <Text style={styles.btnText}>Добавить</Text>
+          <Text style={styles.btnText}>Eklemek</Text>
         </TouchableOpacity>
       )}
     </View>
@@ -58,7 +57,7 @@ const styles = StyleSheet.create({
   },
   cart: {
     paddingTop: 36,
-    alignItems: "center",
+    alignItems: 'center',
     marginLeft: 20,
   },
   backBtn: {
@@ -73,53 +72,52 @@ const styles = StyleSheet.create({
   },
   name: {
     fontSize: 25,
-    alignSelf: "center",
+    alignSelf: 'center',
     marginTop: 20,
     marginBottom: 20,
-    fontStyle: "italic",
+    fontStyle: 'italic',
   },
   price: {
     fontSize: 20,
-    alignSelf: "center",
-    color: "#00BBDC",
-    fontWeight: "700",
+    alignSelf: 'center',
+    color: '#00BBDC',
+    fontWeight: '700',
   },
   desc: {
     fontSize: 15,
-    alignSelf: "center",
+    alignSelf: 'center',
     marginTop: 25,
-    
   },
   btn: {
-    backgroundColor: "#00BBDC",
+    backgroundColor: '#00BBDC',
     borderRadius: 25,
     width: '80%',
     height: '10%',
     paddingTop: 10,
     paddingBottom: 10,
-    alignItems: "center",
-    justifyContent: "center",
-    alignSelf: "center",
-    marginTop: "auto",
-    marginBottom:  "auto",
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignSelf: 'center',
+    marginTop: 'auto',
+    marginBottom: 'auto',
   },
   btnText: {
     fontSize: 18,
-    alignSelf: "center",
-    color: "white",
+    alignSelf: 'center',
+    color: 'white',
   },
   done: {
-    backgroundColor: "#20E300",
+    backgroundColor: '#20E300',
     borderRadius: 25,
     width: '80%',
     height: '10%',
     paddingTop: 10,
     paddingBottom: 10,
-    alignItems: "center",
-    justifyContent: "center",
-    alignSelf: "center",
-    marginTop: "auto",
-    marginBottom:  "auto",
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignSelf: 'center',
+    marginTop: 'auto',
+    marginBottom: 'auto',
   },
 });
 

@@ -12,8 +12,10 @@ const ThankYou = ({navigation}) => {
 
   return (
     <View style={styles.cont}>
-      <Text style={styles.title}>Благодарим за ваш заказ!!!</Text>
-      <Text style={styles.desc}>Наши менеджеры свяжутся с вами в ближайшее время</Text>
+      <Text style={styles.title}>Siparişiniz için teşekkür ederiz!!!</Text>
+      <Text style={styles.desc}>
+        Yöneticilerimiz kısa süre içinde sizinle iletişime geçecektir
+      </Text>
     </View>
   );
 };
@@ -31,15 +33,16 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    alignSelf: "center",
+    alignSelf: 'center',
     marginBottom: 15,
-    fontStyle: "italic",
+    fontStyle: 'italic',
   },
   desc: {
     fontSize: 15,
-    alignSelf: "center",
-    fontStyle: "italic",
+    alignSelf: 'center',
+    fontStyle: 'italic',
     width: '90%',
+    textAlign: 'center',
   },
 });
 
